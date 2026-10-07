@@ -1,0 +1,27 @@
+{
+  "pollMinutes": 5,
+  "realertHours": 24,
+  "tasks": [
+    { "name": "NightlyBackup", "path": "\\", "maxAgeHours": 25, "expectSuccess": true, "alertOnFail": true },
+    { "name": "*", "path": "\\Company\\", "expectSuccess": true, "alertOnFail": true }
+  ],
+  "heartbeats": [
+    { "file": "C:\\Scripts\\hb.txt", "maxAgeMinutes": 90, "label": "ETL job check-in" }
+  ],
+  "alerts": {
+    "smtp": {
+      "enabled": false,
+      "server": "smtp.example.com",
+      "port": 587,
+      "ssl": true,
+      "from": "taskwatch@example.com",
+      "to": [ "admin@example.com" ],
+      "user": "",
+      "password": ""
+    },
+    "webhook": { "enabled": false, "url": "https://outlook.office.com/webhook/..." },
+    "log": "C:\\ProgramData\\TaskWatch\\taskwatch.log"
+  },
+  "stateFile": "C:\\ProgramData\\TaskWatch\\state.json",
+  "statusHtml": "C:\\ProgramData\\TaskWatch\\status.html"
+}
