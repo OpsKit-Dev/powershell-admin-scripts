@@ -53,6 +53,20 @@ ticket-tagged log) - plus this README and the full documentation.
 
 Instant download, 30-day no-questions refund on both.
 
+## TaskWatch - know when your scheduled tasks fail
+
+`TaskWatch/TaskWatch-mini.ps1` is a free, MIT-licensed sample: it prints every scheduled task
+that failed on this machine in the last 24 hours, with exit codes, and exits 1 if anything failed
+(so you can wire it into anything that understands exit codes).
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\TaskWatch\TaskWatch-mini.ps1
+```
+
+The full **TaskWatch** adds alert delivery (email / Teams-style webhook / log), missed-run
+detection, heartbeat files, missing & disabled task detection, alert dedup and an HTML status
+page. Local, subscription-free, ``:
+https://xennedelan.gumroad.com/l/taskwatch
 ## License
 
 MIT for the two scripts in this repository (see LICENSE). The OpsKit kit as a whole is sold
